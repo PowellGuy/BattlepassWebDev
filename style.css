@@ -81,3 +81,36 @@ body
     height: 100%;
     background-color: aqua;
 }
+
+.content_grid
+{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 50% auto;
+    background-color: antiquewhite;
+}
+
+.content_grid > #content_gridL, #content_gridR, #content_gridC
+{
+    background-color: blueviolet;
+    border-color: black;
+    border-style: dashed;
+}
+
+#content_gridL
+{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 65% 20%;
+    row-gap: 5%;
+    padding: 0%;
+}
+
+#content_gridL > #gridL_top, #gridL_bottom
+{
+    background-color: blueviolet;
+    border-color: black;
+    border-style: dashed;
+}
