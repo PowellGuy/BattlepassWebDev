@@ -37,7 +37,7 @@ body
 {
     width: 100%; 
     height: 100%;
-    background-image: url("/images/background.webp");
+    background-image: url("/images/mhwbackground.png");
     
 }
 
@@ -256,7 +256,7 @@ body
     width: 100%;
     display: grid;
     grid-template-rows: 70% 20%;
-    row-gap: 2%;
+    row-gap: 0;
     padding: 0%;
     z-index: 1;
 }
@@ -265,28 +265,110 @@ body
 {
     margin-top: 10%;
     display: flex;
-    background-image: url("/images/BPimg_Amstrigian_Icon.png");
-    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+}
+
+#gridC_bottom
+{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+#itemname
+{
+    color: white; 
+    font-size: large;
+}
+
+#itemunlocked
+{
+    text-shadow: 2px 2px #000; 
+    color: white;
+    padding: 0%;
+    margin: 5px;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-size: x-large; 
+}
+
+#passunlocked
+{
+    background-color: rgb(5, 68, 29);
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-size: xx-large;
+    box-sizing: border-box;
+    border: 5px solid black;  
 }
 
 #mainactor
 {
-    border-style: solid;
-    border-radius: 20%;
+    border-style: dashed;
+    /* border-radius: 20%; */
     width: auto;
     height: auto;
-    max-width: 99%;
-    max-height: 99%;    
+    max-width: 100%;
+    max-height: 100%;    
     z-index: 1;
 }
 
 
+.content_gridB
+{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    justify-content: center;
+    align-items: center;
+}
 
+.gallery
+{
+    display: flex;
+    width: 80%;
+    height: 100%;
+  
+    
+    /* font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-size: large;
+    font-style: normal;
+    font-variant: small-caps;
+    font-weight: 100; */
 
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+    gap: 2%;
+    
+}
 
+.desc
+{
+    display: flex;
+    width: auto;
+    height: auto;
+    justify-content:center;
+    align-items: center;
+} 
 
-
-
+.itemimg
+{
+    border-radius: 10%;
+    width: 100%;
+    max-height: 100%;
+    src: ("/images/BP-img_Dapperwing.png");
+    box-sizing: border-box;
+    border: 5px solid whitesmoke; 
+}
 
 @keyframes expandWidth 
 {
