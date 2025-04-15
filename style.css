@@ -10,7 +10,7 @@ body
     margin: 0%;
     padding: 0%;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
 }
 
 /* Div Styles */
@@ -35,7 +35,7 @@ body
 #Page
 {
     width: 100%; 
-    height: 100%;
+    height: auto;
     background-image: url("/images/mhwbackground.png");
     
 }
@@ -173,13 +173,10 @@ body
     background-color: black;
 }
 
-#gridL_main_content
+#gridL_main
 {
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
 }
 
@@ -264,12 +261,12 @@ body
 
 
 /* Grid styles (CENTER) */
-#content_gridC
+.content_gridlayout
 {
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-rows: 70% 20%;
+    grid-template-rows: 70%;
     row-gap: 0;
     padding: 0%;
     z-index: 1;
@@ -285,12 +282,17 @@ body
 
 #gridC_bottom
 {
-    height: 100%;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
    
+}
+
+#gridC_main
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #itemname
@@ -337,23 +339,16 @@ body
 
 .content_gridB
 {
-    height: 100%;
-    width: 100%;
     display: flex;
-    flex-direction: row;
-    gap: 10%;
     justify-content: center;
-    align-items: center;
 }
 
 .gallery
 {
     display: flex;
     width: 80%;
-    height: 100%;
-    overflow-x: hidden;
+    overflow: auto;
     white-space: nowrap;
-    padding: 10px;
     gap: 2%;
 }
 
@@ -383,22 +378,31 @@ body
 
 #gridR_main
 {
-    margin-top: 10%;
+    /* margin-top: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 100%; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
 #gridR_main_content
 {
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    margin-top: 10%;
+
+    /* width: 50%;
     height: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; */
     /* align-items: center; */
 }
 
