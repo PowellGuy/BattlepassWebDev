@@ -13,12 +13,11 @@ body
     height: 100%;
 }
 
-
-
 /* Div Styles */
 
 .content
 {
+    display: flex;
     width: 100%;
     height: 100%;
     /* background-color: aqua; */
@@ -52,7 +51,6 @@ body
     color: white;
     display: flex;
     justify-content: center;
-    /* margin: 20px 0 0 0; */
 }
 
 
@@ -162,7 +160,7 @@ body
     
     width: 55%;
     height: 100%;
-    margin-left: 25%;
+    /* margin-left: 25%; */
 }
 
 #gridL_bottom_text
@@ -171,32 +169,51 @@ body
     flex-wrap: wrap;
     overflow-y: scroll;
     width: 100%;
-    height: 100%;   
+    max-height: 65%;   
     background-color: black;
+}
+
+#gridL_main_content
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
 }
 
 #gridL_top
 {
     display: flex;
-    align-items: stretch;
+    /* align-items: stretch; */
     flex-direction: column;
     width: 55%;
-    margin-left: 25%;
+    /* margin-left: 25%; */
     margin-top: 10%;
     background-color: aliceblue;
 }
 
 #gridL_top_mid 
 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     opacity: 100%;
-    box-sizing: border-box;
-    border: 10px solid whitesmoke;
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-image: url("/images/BP-img_Season1.png");
-    background-repeat: no-repeat;
 }
+
+#img_season1
+{
+    box-sizing: border-box;
+    border: 10px solid whitesmoke;
+    max-height: 100%;
+    width: 100%;
+
+
+}
+
 
 #exp_text
 {
@@ -225,8 +242,6 @@ body
     height: 100%;
     width: 100%;
     background-color: rgb(5, 68, 29);  
-    /* font-family: Impact, 'Arial Narrow Bold', sans-serif;
-    font-size: large; */
 }
 
 #currentlevel
@@ -234,7 +249,6 @@ body
     background-color: black;
     width:10%;
     height: 100%;
-    /* border-radius: ; */
     color: white;
     align-items: center;
     justify-items: center;
@@ -311,7 +325,6 @@ body
 #mainactor
 {
     border-style: dashed;
-    /* border-radius: 20%; */
     width: auto;
     height: auto;
     max-width: 100%;
@@ -319,6 +332,8 @@ body
     z-index: 1;
 }
 
+
+/* Grid bottom content */
 
 .content_gridB
 {
@@ -336,49 +351,23 @@ body
     display: flex;
     width: 80%;
     height: 100%;
-  
-    /* font-family: Impact, 'Arial Narrow Bold', sans-serif;
-    font-size: large;
-    font-style: normal;
-    font-variant: small-caps;
-    font-weight: 100; */
-
-    overflow: auto;
+    overflow-x: hidden;
     white-space: nowrap;
     padding: 10px;
     gap: 2%;
-    
 }
-
-.desc
-{
-    display: flex;
-    width: auto;
-    height: auto;
-    justify-content:center;
-    align-items: center;
-} 
 
 .itemimg
 {
     border-radius: 10%;
-    width: 100%;
-    max-height: 100%;
+    width: 80%;
+    max-height: 80%;
     src: ("/images/BP-img_Dapperwing.png");
     box-sizing: border-box;
     border: 5px solid whitesmoke; 
 }
 
-
-#gridC_bottom
-{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;   
-}
-
+/* Grid right content */
 
 #content_gridR
 {
@@ -389,7 +378,6 @@ body
     row-gap: 0;
     padding: 0%;
     z-index: 1;
-   
 }
 
 
@@ -411,22 +399,24 @@ body
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 }
 
 
 #thumbnail_img
 {
     box-sizing: border-box;
-    border: 5px solid whitesmoke; 
+    border: 10px solid whitesmoke; 
     width: 100%;
     height: 100%;
 }
+
 
 #cost_text
 {
     background-color: #000;
 }
+
 
 #thumbnail_cost
 {
@@ -434,12 +424,12 @@ body
     justify-content: flex-end;
     align-items: center;
     font-family: 'Courier New', Courier, monospace;
-    font-size: large;
+    font-size: x-large;
     color: white;
     background-color: black;
-    
     width: 100%;
 }
+
 
 #thumbnail_description
 {
@@ -458,3 +448,135 @@ body
     0% { width: 0; }
     100% { width: auto; }
 }
+
+@media (min-width: 1920px) and (max-height: 1280px)
+{
+    #content_gridL 
+    {
+        height: 30%;
+        width: 100%;
+    }
+    #content_gridC
+    {
+        height: 80%;
+        width: 100%;
+    }
+    #content_gridR 
+    {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1280px) and (max-height: 720px)
+{
+    #content_gridL 
+    {
+        height: 30%;
+        width: 100%;
+    }
+    #content_gridC
+    {
+        height: 45%;
+        width: 100%;
+    }
+    #content_gridR 
+    {
+        height: 65%;
+        width: 100%;
+    }
+
+    #season_title
+    {
+        font-family: Impact, 'Arial Narrow Bold', sans-serif;
+        font-size: large;
+        margin-top: auto;
+        margin-bottom: auto;
+        color: white;
+        display: flex;
+        justify-content: center;
+    }
+
+    #Section_items 
+    {
+        width: 100%;
+        height: 23%;
+    }
+
+    #gridL_bottom_text 
+    {
+        display: flex;
+        flex-wrap: wrap;
+        overflow-y: scroll;
+        width: 100%;
+        max-height: 40%;
+        background-color: black;
+    }
+}
+
+
+
+@media (min-width: 1280px) and (max-height: 720px) 
+{
+    .gallery
+    {
+        display: none;
+    }
+
+}
+
+/* #content_gridC
+{
+    height: 87%;
+}
+
+#gridL_bottom_text
+{
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    width: 100%;
+    max-height: 43%;
+    background-color: black;
+}
+
+
+
+#content_gridL 
+{
+    width: 77%;
+}
+
+@media (max-height: 1028px) 
+{
+
+#content_gridC
+{
+    height: 67%;
+}
+#content_gridL 
+{
+    height: 50%;
+}
+
+}
+
+@media (max-height: 720px) 
+{
+    #content_gridC
+    {
+        height: 40%;
+    }
+    #content_gridL 
+    {
+        height: 30%;
+        width: 100%;
+    }
+    #content_gridR 
+    {
+        height: 77%;
+        width: 100%;
+    }
+
+
+} */
