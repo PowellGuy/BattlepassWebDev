@@ -363,7 +363,14 @@ body
     width: 322px;
     box-sizing: border-box;
     border: 5px solid whitesmoke;
+    opacity: 0.8;
+    
 }
+
+/* .itemimg:hover
+{
+ opacity: 1;
+} */
 
 /* Grid right content */
 
